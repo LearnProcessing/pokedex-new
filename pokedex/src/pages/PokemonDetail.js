@@ -1,12 +1,11 @@
 import { React } from 'react'
 import { GET_DETAIL } from '../graphql/queries'
-import { useQuery, useReactiveVar } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import { useParams } from 'react-router-dom'
 import Lottie from 'react-lottie'
 import Pikachu from '../lotties/pikachu'
 import PokemonCatch from '../components/PokemonCatch'
 import { TypeProvider, type } from '../context/TypeContext'
-import { myPokemonObj } from '../graphql/vars'
 
 export default function PokemonDetail(){
     const { name } = useParams()
@@ -21,8 +20,6 @@ export default function PokemonDetail(){
     
     let storagePokemons = JSON.parse(localStorage.getItem('mypokemons'))
     if(!storagePokemons) storagePokemons = {}
-    myPokemonObj(storagePokemons)
-    const mypokemons = useReactiveVar(myPokemonObj)
 
     const { loading, error, data } = useQuery(GET_DETAIL, {
         variables: { name }
@@ -43,7 +40,7 @@ export default function PokemonDetail(){
     return(
         <>
             <TypeProvider value={type[data.pokemon.types[0].type.name] || type["unknown"]}>
-            <PokemonCatch pokemon={data.pokemon} totalOwned={mypokemons[data.pokemon.name]? mypokemons[data.pokemon.name].totalOwned : 0}/>
+            <PokemonCatch pokemon={data.pokemon}/>
             </TypeProvider>
         
         </>

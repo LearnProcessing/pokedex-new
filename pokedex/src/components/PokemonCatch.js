@@ -6,6 +6,7 @@ import HorizontalDetail from '../components/HorizontalDetail'
 import { myPokemonObj } from '../graphql/vars'
 import { useReactiveVar } from '@apollo/client'
 
+
 export default function PokemonCatch(props){
     const { pokemon } = props
     const unknown = {
@@ -17,6 +18,9 @@ export default function PokemonCatch(props){
     const type = useContext(TypeContext) || unknown
 
     let pokemonNickname
+    myPokemonObj(JSON.parse(localStorage.getItem('mypokemons')))
+    let pokemonObj = useReactiveVar(myPokemonObj)
+    let totalOwned = pokemonObj[pokemon.name].totalOwned
 
     async function catchPokemon(e, pokemon){
         e.preventDefault()
@@ -44,7 +48,7 @@ export default function PokemonCatch(props){
             console.log('pokemon escaped')
         }
     }
-
+    
 
     return(
         <> 
@@ -63,7 +67,7 @@ export default function PokemonCatch(props){
                                 <p>weight: {pokemon.weight}</p>
                             </div>
                         </div>
-                        <p className="text-center text-xs pt-2">owned: {props.totalOwned}</p>
+                        <p className="text-center text-xs pt-2">owned: {totalOwned}</p>
                     </div>
 
                     <div className={`${type.outer} flex flex-row justify-around p-3 pt-0 rounded-lg`}>
