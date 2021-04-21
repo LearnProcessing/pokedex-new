@@ -6,6 +6,113 @@ import HorizontalDetail from '../components/HorizontalDetail'
 import { myPokemonObj } from '../graphql/vars'
 import { useReactiveVar } from '@apollo/client'
 
+ /**
+    PurgeCSS:
+    bg-yellow-500
+    bg-yellow-300
+    border-yellow-500
+    border-yellow-300
+
+    bg-blue-400
+    bg-blue-200
+    border-blue-500
+    border-blue-200
+
+    bg-green-400
+    bg-green-200
+    border-green-400
+    border-green-200
+
+    bg-yellow-300
+    bg-yellow-100
+    border-yellow-300
+    border-yellow-100
+
+    bg-pink-500
+    bg-pink-300
+    border-pink-500
+    border-pink-300
+
+
+    bg-green-200
+    bg-green-50
+    border-green-200
+    border-green-50
+
+    bg-purple-700
+    bg-purple-500
+    border-purple-700
+    border-purple-500
+
+
+    bg-yellow-800
+    bg-yellow-600
+    border-yellow-800
+    border-yellow-600
+
+    bg-red-300
+    bg-red-100
+    border-red-300
+    border-red-100
+
+    bg-yellow-200
+    bg-yellow-50
+    border-yellow-200
+    border-yellow-50
+
+    bg-red-600
+    bg-red-300
+    border-red-600
+    border-red-300
+
+    bg-purple-300
+    bg-purple-100
+    border-purple-300
+    border-purple-100
+
+    bg-indigo-600
+    bg-indigo-400
+    border-indigo-600
+    border-indigo-400
+
+    bg-yellow-200
+    bg-yellow-100
+    border-yellow-200
+    border-yellow-100
+
+    bg-gray-500
+    bg-gray-300
+    border-gray-500
+    border-gray-300
+
+    bg-green-600
+    bg-green-400
+    border-green-600
+    border-green-400
+
+    bg-indigo-700
+    bg-indigo-400
+    border-indigo-700
+    border-indigo-400
+
+    bg-gray-400
+    bg-gray-200
+    border-gray-400
+    border-gray-200
+
+    bg-indigo-300
+    bg-indigo-100
+    border-indigo-300
+    border-indigo-100
+    
+    bg-gray-900
+    bg-gray-400
+    border-gray-900
+    border-gray-400
+
+   *
+
+   */
 
 export default function PokemonCatch(props){
     const { pokemon } = props

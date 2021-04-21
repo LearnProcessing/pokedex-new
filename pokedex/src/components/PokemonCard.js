@@ -15,7 +15,7 @@ export default function PokemonCard(props){
 
     function checkDetail(e, pokemonName){
         e.preventDefault()
-        console.log(e.target.id, 'check>>>>>>>>')
+
         if(e.target.id === 'deleteButton'){
             e.stopPropagation()
         } else {

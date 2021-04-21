@@ -8,6 +8,8 @@ module.exports = {
     './src/pages/MyPokemonList.js',
     './src/pages/PokemonList.js',
     './src/pages/PokemonDetail.js',
+    './src/helpers/PokeballModal.js',
+    './src/context/TypeContext.js'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
