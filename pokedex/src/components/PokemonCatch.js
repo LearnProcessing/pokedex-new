@@ -19,7 +19,9 @@ export default function PokemonCatch(props){
 
     let pokemonNickname
     myPokemonObj(JSON.parse(localStorage.getItem('mypokemons')))
+    
     let pokemonObj = useReactiveVar(myPokemonObj)
+    if(!pokemonObj) pokemonObj = {}
     let totalOwned = pokemonObj[pokemon.name]? pokemonObj[pokemon.name].totalOwned : 0
 
     async function catchPokemon(e, pokemon){
