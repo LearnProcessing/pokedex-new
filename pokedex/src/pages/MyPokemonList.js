@@ -54,16 +54,18 @@ export default function PokemonList (props){
     }
 
     return (
-        <div className="h-120">
-            <div className="pt-4">
-                <h1 className="font-press-start opacity-80 text-center">Your Pokemons: {storagePokemons.totalPokemon}</h1>
-            </div>
-            <div className="ml-16 flex flex-row justify-left w-84 flex-wrap pt-6">
+        <div className="2xl:pb-120">
+        <div className="pt-4">
+            <h1 className="font-press-start opacity-80 text-center">Your Pokemons: {storagePokemons.totalPokemon}</h1>
+        </div>
+        <div className="h-content 2xl:flex 2xl:flex-row 2xl:justify-center">
+            <div className={`sm:ml-16 max-w-8xl flex flex-row justify-center sm:justify-start w-84 flex-wrap pt-6 ${mypokemons.length>2? "": 'pb-96'} sm:${mypokemons.length>3? "": 'pb-96'} lg:${mypokemons.length>4? "": 'pb-96'} xl:${mypokemons.length>6? "": 'pb-96'}`}>
                 {mypokemons.map(pokemon => {
                     return <PokemonCard key={pokemon.date} pokemon={pokemon} fetchPokemon={fetchStoragePokemon}/>
                 }
                 )}
             </div>
+        </div>
         </div>
     )
        

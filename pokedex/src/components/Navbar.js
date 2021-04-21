@@ -9,7 +9,7 @@ export default function Navbar(){
     return (
         <nav className="bg-gray-100">
             <div className="flex flex-row justify-center pt-2 pb-3 ">
-                <NavLink to="/pokemons"><img className="mr-2 w-32 md:w-46 xl:w-45 h-12 md:h-14 xl:h-18 inline" src={logo} alt="Pokemon Logo"/></NavLink>
+                <NavLink to="/"><img className="mr-2 w-32 md:w-46 xl:w-45 h-12 md:h-14 xl:h-18 inline" src={logo} alt="Pokemon Logo"/></NavLink>
                 <div className="ml-2 group pt-1 md:pt-2 relative w-20 h-12 items-center scale-50">
                     
                     <div className="absolute z-0 border border-r-2 border-l-2 border-gray-100 bg-indigo-500 w-20 h-12 rounded-t-lg">

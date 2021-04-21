@@ -1,9 +1,10 @@
 module.exports = {
   purge: [
-    './src/components/InfoCard.js',
+    './src/components/HorizontalDetail.js',
+    './src/components/VerticalDetail.js',
     './src/components/Navbar.js',
     './src/components/PokemonCatch.js',
-    './src/components/PokemonTable.js',
+    './src/components/PokemonCard.js',
     './src/pages/MyPokemonList.js',
     './src/pages/PokemonList.js',
     './src/pages/PokemonDetail.js',
@@ -19,6 +20,10 @@ module.exports = {
         '108': '34rem',
         '114': '38rem',
         '120': '42rem'
+      },
+      maxWidth:{
+        '8xl': '88rem',
+        '9xl': '96rem'
       }
     }
   },

@@ -18,7 +18,7 @@ export default function PokemonList (){
       };
     let storagePokemons = JSON.parse(localStorage.getItem('mypokemons'))
     if(!storagePokemons) storagePokemons = {}
-    const limit = 12
+    const limit = 15
     const dispatch = useDispatch()
     const offset = useSelector(state => state.pokemons.offset)
     let currentPage = Math.floor(offset / limit) + 1
@@ -50,7 +50,7 @@ export default function PokemonList (){
 
     return (
         <div className="flex flex-row justify-center">
-            <div className="flex flex-row justify-center ml-3 w-84 flex-wrap pt-6 max-w-5xl 2xl:pb-96 2xl:pt-12">
+            <div className="flex flex-row justify-center ml-3 w-84 flex-wrap pt-6 max-w-3xl xl:max-w-6xl 2xl:pb-96 2xl:pt-12">
                 {data.pokemons.results.map(pokemon => {
                     return (
                         <PokemonCard className="" key={pokemon.id} pokemon={pokemon} totalOwned={storagePokemons[pokemon.name]? storagePokemons[pokemon.name].totalOwned : 0}/>
