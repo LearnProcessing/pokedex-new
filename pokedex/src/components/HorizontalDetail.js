@@ -1,6 +1,6 @@
 export default function HorizontalDetail(props){
     const { type, pokemon } = props
-    console.log(type, 'check type >>>>>>><<<<<<<<<<<')
+
     return(
         <>
             <div className="mx-2 hidden sm:inline-block">
